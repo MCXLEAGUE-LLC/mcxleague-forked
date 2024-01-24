@@ -131,7 +131,7 @@ export const getStats = async ({
   }
 
   let url = new URL(
-    `https://api.us-east.tinybird.co/v0/pipes/${endpoint}.json`,
+    `https://api.us-east.aws.tinybird.co/v0/pipes/${endpoint}.json`,
   );
 
   // TODO: remove this logic after #545 merges
