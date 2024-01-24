@@ -2,16 +2,16 @@
   "crons": [
     {
       "path": "/api/cron/domains",
-      "schedule": "0 */3 * * *"
+      "schedule": "0 0 * * *"
     },
     {
       "path": "/api/cron/usage",
-      "schedule": "0 14 * * *"
+      "schedule": "0 0 * * *"
     }
   ],
   "functions": {
     "app/api/cron/**/*.ts": {
-      "maxDuration": 300
+      "maxDuration": 10
     }
   }
 }
