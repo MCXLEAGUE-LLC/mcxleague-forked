@@ -45,7 +45,7 @@ export const HOME_DOMAIN = `https://${process.env.NEXT_PUBLIC_APP_DOMAIN}`;
 export const APP_HOSTNAMES = new Set([
   `app.${process.env.NEXT_PUBLIC_APP_DOMAIN}`,
   `preview.${process.env.NEXT_PUBLIC_APP_DOMAIN}`,
-  "localhost:8888",
+  "app.mcxleague.com",
   "localhost",
 ]);
 
@@ -54,19 +54,19 @@ export const APP_DOMAIN =
     ? `https://app.${process.env.NEXT_PUBLIC_APP_DOMAIN}`
     : process.env.NEXT_PUBLIC_VERCEL_ENV === "preview"
     ? `https://preview.${process.env.NEXT_PUBLIC_APP_DOMAIN}`
-    : "http://localhost:8888";
+    : "http://app.mcxleague.com";
 
 export const APP_DOMAIN_WITH_NGROK =
   process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
     ? `https://app.${process.env.NEXT_PUBLIC_APP_DOMAIN}`
     : process.env.NEXT_PUBLIC_VERCEL_ENV === "preview"
     ? `https://preview.${process.env.NEXT_PUBLIC_APP_DOMAIN}`
-    : process.env.NGROK_URL || "http://localhost:8888";
+    : process.env.NGROK_URL || "http://app.mcxleague.com";
 
 export const API_HOSTNAMES = new Set([
   `api.${process.env.NEXT_PUBLIC_APP_DOMAIN}`,
   `api.${SHORT_DOMAIN}`,
-  "api.localhost:8888",
+  "api.app.mcxleague.com",
 ]);
 
 export const API_DOMAIN =
@@ -74,31 +74,31 @@ export const API_DOMAIN =
     ? `https://api.${process.env.NEXT_PUBLIC_APP_DOMAIN}`
     : process.env.NEXT_PUBLIC_VERCEL_ENV === "preview"
     ? `https://api.${process.env.NEXT_PUBLIC_APP_DOMAIN}`
-    : "http://api.localhost:8888";
+    : "http://api.app.mcxleague.com";
 
 export const ADMIN_HOSTNAMES = new Set([
   `admin.${process.env.NEXT_PUBLIC_APP_DOMAIN}`,
-  "admin.localhost:8888",
+  "admin.app.mcxleague.com",
 ]);
 
 export const DEFAULT_REDIRECTS = {
-  home: "https://dub.co",
-  dub: "https://dub.co",
-  signin: "https://app.dub.co/login",
-  login: "https://app.dub.co/login",
-  register: "https://app.dub.co/register",
-  signup: "https://app.dub.co/register",
-  app: "https://app.dub.co",
-  dashboard: "https://app.dub.co",
-  links: "https://app.dub.co/links",
-  settings: "https://app.dub.co/settings",
-  welcome: "https://app.dub.co/welcome",
+  home: "https://mcxleague.com",
+  dub: "https://mcxleague.com",
+  signin: "https://app.mcxleague.com/login",
+  login: "https://app.mcxleague.com/login",
+  register: "https://app.mcxleague.com/register",
+  signup: "https://app.mcxleague.com/register",
+  app: "https://app.mcxleague.com",
+  dashboard: "https://app.mcxleague.com",
+  links: "https://app.mcxleague.com/links",
+  settings: "https://app.mcxleague.com/settings",
+  welcome: "https://app.mcxleague.com/welcome",
   discord: "https://twitter.com/dubdotco", // placeholder for now
 };
 
 export const DUB_HEADERS = {
   headers: {
-    "x-powered-by": "Dub.co - Link management for modern marketing teams",
+    "x-powered-by": "mcxleague.com - Link management for modern marketing teams",
   },
 };
 
@@ -125,7 +125,7 @@ export const DUB_DOMAINS = [
     archived: false,
     target: `https://${process.env.NEXT_PUBLIC_APP_DOMAIN}`,
     type: "redirect",
-    placeholder: "https://dub.co/help/article/what-is-dub",
+    placeholder: "https://mcxleague.com/help/article/what-is-dub",
     clicks: 0,
     allowedHostnames: [],
   },
@@ -136,7 +136,7 @@ export const DUB_DOMAINS = [
           verified: true,
           primary: false,
           archived: false,
-          target: "https://dub.co/tools/chatgpt-link-shortener",
+          target: "https://mcxleague.com/tools/chatgpt-link-shortener",
           type: "redirect",
           placeholder: "https://chat.openai.com/g/g-UGjKKONEe-domainsgpt",
           clicks: 0,
@@ -147,7 +147,7 @@ export const DUB_DOMAINS = [
           verified: true,
           primary: false,
           archived: false,
-          target: "https://dub.co/tools/amazon-link-shortener",
+          target: "https://mcxleague.com/tools/amazon-link-shortener",
           type: "redirect",
           placeholder: "https://www.amazon.com/dp/B0BW4SWNC8",
           clicks: 0,
@@ -158,7 +158,7 @@ export const DUB_DOMAINS = [
           verified: true,
           primary: false,
           archived: false,
-          target: "https://dub.co/tools/spotify-link-shortener",
+          target: "https://mcxleague.com/tools/spotify-link-shortener",
           type: "redirect",
           placeholder: "https://open.spotify.com/album/1SCyi9a5pOasikidToUY5y",
           clicks: 0,
