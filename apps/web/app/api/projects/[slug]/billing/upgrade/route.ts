@@ -13,8 +13,8 @@ export const POST = withAuth(async ({ searchParams, project, session }) => {
   const stripeSession = await stripe.checkout.sessions.create({
     customer_email: session.user.email,
     billing_address_collection: "required",
-    success_url: `${APP_DOMAIN}/${project.slug}/settings/billing?success=true`,
-    cancel_url: `${APP_DOMAIN}/${project.slug}/settings/billing?upgrade=${
+    success_url: `app.mcxleague.com/${project.slug}/settings/billing?success=true`,
+    cancel_url: `app.mcxleague.com/${project.slug}/settings/billing?upgrade=${
       plan.split("_")[0]
     }`,
     line_items: [{ price: "price_1OcsciHraseApd8ID7d6NtOY", quantity: 1 }],
