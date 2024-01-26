@@ -10,10 +10,6 @@ export const POST = withAuth(async ({ searchParams, project, session }) => {
     return new Response("Missing plan lookup key", { status: 400 });
   }
 
-  const prices = await stripe.prices.list({
-    lookup_keys: [plan],
-  });
-
   const stripeSession = await stripe.checkout.sessions.create({
     customer_email: session.user.email,
     billing_address_collection: "required",
@@ -21,12 +17,12 @@ export const POST = withAuth(async ({ searchParams, project, session }) => {
     cancel_url: `${APP_DOMAIN}/${project.slug}/settings/billing?upgrade=${
       plan.split("_")[0]
     }`,
-    line_items: [{ price: prices.data[0].id, quantity: 1 }],
+    line_items: [{ price: price_1OcsciHraseApd8ID7d6NtOY, quantity: 1 }],
     automatic_tax: {
-      enabled: true,
+      enabled: false,
     },
     tax_id_collection: {
-      enabled: true,
+      enabled: false,
     },
     mode: "subscription",
     allow_promotion_codes: true,
