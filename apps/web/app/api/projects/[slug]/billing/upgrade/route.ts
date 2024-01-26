@@ -17,7 +17,7 @@ export const POST = withAuth(async ({ searchParams, project, session }) => {
     cancel_url: `${APP_DOMAIN}/${project.slug}/settings/billing?upgrade=${
       plan.split("_")[0]
     }`,
-    line_items: [{ price: price_1OcsciHraseApd8ID7d6NtOY, quantity: 1 }],
+    line_items: [{ price: "price_1OcsciHraseApd8ID7d6NtOY", quantity: 1 }],
     automatic_tax: {
       enabled: false,
     },
